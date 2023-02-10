@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\bin\Debug\net6.0\ConsoleAppLessons1.exe
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\bin\Debug\net6.0\ConsoleAppLessons1.deps.json
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\bin\Debug\net6.0\ConsoleAppLessons1.runtimeconfig.json
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\bin\Debug\net6.0\ConsoleAppLessons1.dll
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\bin\Debug\net6.0\ConsoleAppLessons1.pdb
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\ConsoleAppLessons1.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\ConsoleAppLessons1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\ConsoleAppLessons1.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\ConsoleAppLessons1.AssemblyInfo.cs
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\ConsoleAppLessons1.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\ConsoleAppLessons1.dll
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\refint\ConsoleAppLessons1.dll
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\ConsoleAppLessons1.pdb
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\ConsoleAppLessons1.genruntimeconfig.cache
+C:\Users\user\source\repos\ConsoleAppLessons\Lesons1\ConsoleAppLessons1\obj\Debug\net6.0\ref\ConsoleAppLessons1.dll
