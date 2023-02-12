@@ -46,6 +46,21 @@ namespace ConsoleAppLessons1
             bool numberProgresNum = numberProgres(2, 5, 8);
             Console.Write("kartacen true, ete trvac tver tvabanakan progresia en:");
             Console.WriteLine(numberProgresNum);
+            //28.kartacen true, ete trvac tver tvabanakan progresia en
+            bool numberGeometricProgresNum = numberGeometricProgres(8, 4, 2);
+            Console.Write("kartacen true, ete trvac tver erkrachapakan progresia en:");
+            Console.WriteLine(numberGeometricProgresNum);
+            //29.kartacen achman kargi 
+            int[] numAsortNum = numAsort(7, 15, 8);
+            Console.Write("kartacen nvazman kargi:");
+            Console.WriteLine(String.Join(",", numAsortNum));
+
+            //30.kartacen achman kargi 
+            int[] numRsortNum = numRsort(7, 15, 8);
+            Console.Write("kartacen achman kargi:");
+            Console.WriteLine(String.Join(",", numRsortNum));
+
+
         }
 
         /// <summary>
@@ -200,6 +215,23 @@ namespace ConsoleAppLessons1
         }
 
         /// <summary>
+        /// kartacen true, ete trvac tver tvabanakan progresia en
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        public static bool numberProgres(int a, int b, int c)
+        {
+            int d = b - a;
+            if (c == a + 2d)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
         /// kartacen true, ete trvac tver erkrachapakan progresia en
         /// </summary>
         /// <param name="a"></param>
@@ -216,6 +248,69 @@ namespace ConsoleAppLessons1
             return false;
         }
 
+        /// <summary>
+        /// kartacen achman kargi 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <returns> array with Asort</returns>
+        public static int[] numAsort(int a, int b, int c)
+        {
+            int[] arrayInt = new int[3];
+            arrayInt[0] = a;
+            arrayInt[1] = b;
+            arrayInt[2] = c;
+            int t;
+
+            for (int i = 0; i < arrayInt.Length - 1; i++)
+            {
+                int test = arrayInt[i];
+                for (int j = i + 1; j < arrayInt.Length; j++)
+                {
+                    if (arrayInt[i] > arrayInt[j])
+                    {
+                        t = arrayInt[i];
+                        arrayInt[i] = arrayInt[j];
+                        arrayInt[j] = t;
+                    }
+                }
+
+            }
+            return arrayInt;
+        }
+        /// <summary>
+        /// kartacen nvazman kargi 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <returns>array rsort</returns>
+        public static int[] numRsort(int a, int b, int c)
+        {
+            int[] arrayInt = new int[3];
+            arrayInt[0] = a;
+            arrayInt[1] = b;
+            arrayInt[2] = c;
+            int t;
+
+            for (int i=0; i < arrayInt.Length-1; i++)
+            {
+                int test = arrayInt[i];
+                for (int j = i + 1; j < arrayInt.Length; j++)
+                {
+                    if (arrayInt[i] < arrayInt[j])
+                    {
+                        t = arrayInt[i];
+                        arrayInt[i] = arrayInt[j];
+                        arrayInt[j] = t;
+                    }
+                }
+
+            }
+            return arrayInt;
+        }
+      
     }
 
 }
