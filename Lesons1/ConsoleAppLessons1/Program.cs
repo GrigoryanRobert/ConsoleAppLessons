@@ -52,13 +52,26 @@ namespace ConsoleAppLessons1
             Console.WriteLine(numberGeometricProgresNum);
             //29.kartacen achman kargi 
             int[] numAsortNum = numAsort(7, 15, 8);
-            Console.Write("kartacen nvazman kargi:");
+            Console.Write("kartacen achman kargi:");
             Console.WriteLine(String.Join(",", numAsortNum));
 
             //30.kartacen achman kargi 
             int[] numRsortNum = numRsort(7, 15, 8);
-            Console.Write("kartacen achman kargi:");
+            Console.Write("kartacen nvazman kargi:");
             Console.WriteLine(String.Join(",", numRsortNum));
+
+            //31.kartacen a,b,c,d tveric meci arjeq
+            int maxIntFour = bigNumber(4, 15, 15,85);
+            Console.Write("a,b,c,d tveric meci arjeq:");
+            Console.WriteLine(maxIntFour);
+            //32.kartacen a,b,c tveric poqri arjeq
+            int minIntFour = minNumber(100, 7, 15, 1);
+            Console.Write("a,b,c,d tveric poqri arjeq:");
+            Console.WriteLine(minIntFour);
+            //33.kartacen true,ete a,b,c,d tveric mek =1
+            bool getOne = numberGetOne(100, 7, 15, 1);
+            Console.Write("a,b,c,d tveric mek = 1:");
+            Console.WriteLine(getOne);
 
 
         }
@@ -69,6 +82,7 @@ namespace ConsoleAppLessons1
         /// <param name="a"></param>
         /// <param name="b"></param>
         /// <param name="c"></param>
+        /// <param name="d"></param>
         /// <returns></returns>
         public static int bigNumber(int a, int b, int c)
         {
@@ -80,6 +94,27 @@ namespace ConsoleAppLessons1
             int maxInt = arrayInt[0];
 
             for(int i=0;i<arrayInt.Length; i++)
+            {
+                if (arrayInt[i] > maxInt)
+                {
+                    maxInt = arrayInt[i];
+                }
+            }
+
+            return maxInt;
+        }
+        //31
+        public static int bigNumber(int a, int b, int c,int d)
+        {
+            int[] arrayInt = new int[4];
+            arrayInt[0] = a;
+            arrayInt[1] = b;
+            arrayInt[2] = c;
+            arrayInt[3] = d;
+
+            int maxInt = arrayInt[0];
+
+            for (int i = 0; i < arrayInt.Length; i++)
             {
                 if (arrayInt[i] > maxInt)
                 {
@@ -102,6 +137,27 @@ namespace ConsoleAppLessons1
             arrayInt[0] = a;
             arrayInt[1] = b;
             arrayInt[2] = c;
+
+            int minInt = arrayInt[0];
+
+            for (int i = 0; i < arrayInt.Length; i++)
+            {
+                if (arrayInt[i] < minInt)
+                {
+                    minInt = arrayInt[i];
+                }
+            }
+
+            return minInt;
+        }
+        //32
+        public static int minNumber(int a, int b, int c,int d)
+        {
+            int[] arrayInt = new int[4];
+            arrayInt[0] = a;
+            arrayInt[1] = b;
+            arrayInt[2] = c;
+            arrayInt[3] = d;
 
             int minInt = arrayInt[0];
 
@@ -309,6 +365,30 @@ namespace ConsoleAppLessons1
 
             }
             return arrayInt;
+        }
+
+        /// <summary>
+        /// kartacen true, ete trvac tveric mek havasar e 1
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static bool numberGetOne(int a, int b, int c, int d)
+        {
+            int[] arrayInt = new int[4];
+            arrayInt[0] = a;
+            arrayInt[1] = b;
+            arrayInt[2] = c;
+            arrayInt[3] = d;
+            bool numberBool = false;
+            for (int i = 0; i < arrayInt.Length; i++)
+            {
+                if (arrayInt[i] == 1)
+                    numberBool = true;
+            }
+            return numberBool;
         }
       
     }
