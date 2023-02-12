@@ -151,6 +151,10 @@ namespace ConsoleAppLessons1
             {
                 return "y+1";
             }
+             if(b*b == (a*a + c*c) )
+                        {
+                            return "y+1";
+                        }
         }
 
 
