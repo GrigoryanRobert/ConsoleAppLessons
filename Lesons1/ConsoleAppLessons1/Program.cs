@@ -1,4 +1,4 @@
-﻿namespace ConsoleAppLessons1
+namespace ConsoleAppLessons1
 
 {
     class TestClass
