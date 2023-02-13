@@ -1,7 +1,8 @@
-namespace ConsoleAppLessons1
+using System.Runtime.CompilerServices;
 
+namespace ConsoleAppLessons
 {
-    class TestClass
+    class Program
     {
         static void Main(string[] args)
         {
@@ -30,7 +31,7 @@ namespace ConsoleAppLessons1
             bool oneEqualNum = oneEqual(18, 7, 15);
             Console.Write("a,b,c tveric mek havasar  mekin:");
             Console.WriteLine(oneEqualNum);
-               //24.kartacen true ,ete a,b,c tveric 2 havasar e 2
+            //24.kartacen true ,ete a,b,c tveric 2 havasar e 2
             bool twoEqualTwoNum = twoEqualTwo(2, 7, 2);
             Console.Write("a,b,c tveric 2 havasar e 2:");
             Console.WriteLine(twoEqualTwoNum);
@@ -41,7 +42,7 @@ namespace ConsoleAppLessons1
             //26.kartacen 1, ete trvac tveric mek zuyg e
             int oneEvenNum = oneEven(55, 7, 9);
             Console.Write("kartacen 1, ete trvac tveric mek zuyg e:");
-            Console.WriteLine(oneEvenNum); 
+            Console.WriteLine(oneEvenNum);
             //27.kartacen true, ete trvac tver tvabanakan progresia en
             bool numberProgresNum = numberProgres(2, 5, 8);
             Console.Write("kartacen true, ete trvac tver tvabanakan progresia en:");
@@ -61,7 +62,7 @@ namespace ConsoleAppLessons1
             Console.WriteLine(String.Join(",", numRsortNum));
 
             //31.kartacen a,b,c,d tveric meci arjeq
-            int maxIntFour = bigNumber(4, 15, 15,85);
+            int maxIntFour = bigNumber(4, 15, 15, 85);
             Console.Write("a,b,c,d tveric meci arjeq:");
             Console.WriteLine(maxIntFour);
             //32.kartacen a,b,c tveric poqri arjeq
@@ -72,6 +73,33 @@ namespace ConsoleAppLessons1
             bool getOne = numberGetOne(100, 7, 15, 1);
             Console.Write("a,b,c,d tveric mek = 1:");
             Console.WriteLine(getOne);
+            //34.kartacen true,ete a,b,c,d tveric erkusi gumar = mius erkusi gumarin
+            bool twoNumbersSumEqualNum = twoNumbersSumEqual(100, 7, 80, 27);
+            Console.Write("kartacen true,ete a,b,c,d tveric erkusi gumar = mius erkusi gumarin:");
+            Console.WriteLine(twoNumbersSumEqualNum);
+            //35.kartacen true,ete a,b,c,d tveric 1 gumar = mius ereqi gumarin
+            bool oneNumbersSumOthersEqualNum = oneNumbersSumOthersEqual(100, 10, 80, 10);
+            Console.Write("kartacen true,ete a,b,c,d tveric 1 gumar = mius ereqi gumarin:");
+            Console.WriteLine(oneNumbersSumOthersEqualNum);
+            //36.kartacen 1,ete a,b,c,d tveric gone 2 kent en , hakarak depqum 2
+            int twoIsOvnNum = twoIsOvn(9, 10, 11, 10);
+            Console.Write("kartacen 1,ete a,b,c,d tveric 2 kent en, hakarak depqum 2:");
+            Console.WriteLine(twoIsOvnNum);
+
+            //51.eranish tvi miavor=har+tas return tru, else false
+            bool sumTwoOneNum = sumTwoOne(559);
+            Console.Write("eranish tvi miavor=har+tas return tru, else false:");
+            Console.WriteLine(sumTwoOneNum);
+
+            //52.eranish tvi miavorneri mej kan havasar tver return tru, else false
+            bool eranishTviMiavorHavasarNum = eranishTviMiavorHavasar(559);
+            Console.Write("eranish tvi miavorneri mej kan havasar tver return tru, else false:");
+            Console.WriteLine(eranishTviMiavorHavasarNum);
+
+            //53.eranish tvi ev ir tvanshanneri haraberutyun, ete eranish tiv>k, else hakarak
+            double eranishTviHarabValNum = eranishTviHarabVal(559);
+            Console.Write("eranish tvi ev ir tvanshanneri haraberutyun, ete eranish tiv>k, else hakarak:");
+            Console.WriteLine(eranishTviHarabValNum);
 
 
         }
@@ -93,7 +121,7 @@ namespace ConsoleAppLessons1
 
             int maxInt = arrayInt[0];
 
-            for(int i=0;i<arrayInt.Length; i++)
+            for (int i = 0; i < arrayInt.Length; i++)
             {
                 if (arrayInt[i] > maxInt)
                 {
@@ -104,7 +132,7 @@ namespace ConsoleAppLessons1
             return maxInt;
         }
         //31
-        public static int bigNumber(int a, int b, int c,int d)
+        public static int bigNumber(int a, int b, int c, int d)
         {
             int[] arrayInt = new int[4];
             arrayInt[0] = a;
@@ -151,7 +179,7 @@ namespace ConsoleAppLessons1
             return minInt;
         }
         //32
-        public static int minNumber(int a, int b, int c,int d)
+        public static int minNumber(int a, int b, int c, int d)
         {
             int[] arrayInt = new int[4];
             arrayInt[0] = a;
@@ -230,11 +258,11 @@ namespace ConsoleAppLessons1
         /// <returns></returns>
         public static string threeAngel(int a, int b, int c)
         {
-           if(a*a == (b*b + c*c) )
+            if (a * a == (b * b + c * c))
             {
                 return "y=1";
             }
-            if(b*b == (a*a + c*c) )
+            if (b * b == (a * a + c * c))
             {
                 return "y=1";
             }
@@ -296,8 +324,8 @@ namespace ConsoleAppLessons1
         /// <returns></returns>
         public static bool numberGeometricProgres(int a, int b, int c)
         {
-            float q = (float) b / (float)a;
-            if((float)c == (float)(a * q*q))
+            float q = (float)b / (float)a;
+            if ((float)c == (float)(a * q * q))
             {
                 return true;
             }
@@ -350,7 +378,7 @@ namespace ConsoleAppLessons1
             arrayInt[2] = c;
             int t;
 
-            for (int i=0; i < arrayInt.Length-1; i++)
+            for (int i = 0; i < arrayInt.Length - 1; i++)
             {
                 int test = arrayInt[i];
                 for (int j = i + 1; j < arrayInt.Length; j++)
@@ -390,7 +418,131 @@ namespace ConsoleAppLessons1
             }
             return numberBool;
         }
-      
+
+        /// <summary>
+        /// a,b,c,d tveric erkusi gumar = mius erkusi gumarin
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        /// <returns>true or false</returns>
+        public static bool twoNumbersSumEqual(int a, int b, int c, int d)
+        {
+            if(a+b == c+d || a+c== b+d || a+d== c + b)
+            {
+                return true;
+            }
+            return false;
+        }
+        /// <summary>
+        /// kartacen true,ete a,b,c,d tveric 1 gumar = mius ereqi gumarin
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static bool oneNumbersSumOthersEqual(int a, int b, int c, int d)
+        {
+            if (a == b + c + d || b == a + c + d || c  == a + b + d || d == a+b+c)
+            {
+                return true;
+            }
+            return false;
+        }
+        /// <summary>
+        /// kartacen 1,ete a,b,c,d tveric gone 2 kent en , hakarak depqum 2
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static int twoIsOvn(int a, int b, int c, int d)
+        {
+            int count = 0;
+            if (a %2 != 0)
+            {
+                count ++;
+            }
+            if (b % 2 != 0)
+            {
+                count++;
+            }
+            if (c % 2 != 0)
+            {
+                count++;
+            }
+            if (d % 2 != 0)
+            {
+                count++;
+            }
+
+            if (count >= 2)
+            {
+                return 1;
+            }
+            return 2;
+        }
+        /// <summary>
+        /// eranish tvi miavor=har+tas return tru, else false
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static bool sumTwoOne(int a)
+        {
+            int har = a / 100;
+            int tas = (a - (har* 100))/10;
+            int miav = (a - (har* 100) - tas*10);
+            if(miav == har + tas)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// eranish tvi miavorneri mej kan havasar tver return tru, else false
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static bool eranishTviMiavorHavasar(int a)
+        {
+            int har = a / 100;
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+            if (miav == tas ||  tas == har || miav==har)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        /// <summary>
+        /// eranish tvi ev ir tvanshanneri haraberutyun, ete eranish tiv>k, else hakarak
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static double eranishTviHarabVal(int a)
+        {
+            Random r = new Random();
+            double number ;
+            int k = r.Next(100,999);
+            int har = a / 100;
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+
+            if (a>k)
+            {
+                number = a / (har + tas + miav);
+                return number;
+            }
+            number = (har + tas + miav)/a;
+            return number;
+        }
+
     }
 
 }
