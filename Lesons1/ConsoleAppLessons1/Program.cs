@@ -100,6 +100,22 @@ namespace ConsoleAppLessons
             double eranishTviHarabValNum = eranishTviHarabVal(559);
             Console.Write("eranish tvi ev ir tvanshanneri haraberutyun, ete eranish tiv>k, else hakarak:");
             Console.WriteLine(eranishTviHarabValNum);
+            
+            //54.gtnel eranishi tveric mecn
+            int eranishMecTivNum = eranishMecTiv(559);
+            Console.Write("gtnel eranishi tveric mecn:");
+            Console.WriteLine(eranishMecTivNum);
+            
+            //55.gtnel eranishi tveric poqr
+            int eranishTivPoqrNum = eranishTivPoqr(559);
+            Console.Write("gtnel eranishi tveric poqr:");
+            Console.WriteLine(eranishTivPoqrNum);
+
+            //56.gtnel eranish Tvi Miavor Mec Tasnavor
+            double eranishTviMiavorMecTasNum = eranishTviMiavorMecTas(692);
+            Console.Write("gtnel eranishi Tvi Miavor Mec Tasnavor:");
+            Console.WriteLine(eranishTviMiavorMecTasNum);
+            
 
 
         }
@@ -536,11 +552,69 @@ namespace ConsoleAppLessons
 
             if (a>k)
             {
-                number = a / (har + tas + miav);
+                number = (double)a / (har + tas + miav);
+            }else{
+                 number = (double)(har + tas + miav)/a;
+            }
+            return number;
+        }
+        /// <summary>
+        /// eranish tveri miavorneric gtnel mecaguyn
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public  static int eranishMecTiv(int a)
+        {
+            int har = a / 100;
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+
+            if(har > tas && har > miav)
+            {
+                return har;
+            }
+            if (tas > har && tas > miav)
+            {
+                return tas;
+            }
+            return miav;
+        }
+        /// <summary>
+        /// eranish tveri miavorneric gtnel poqr
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static int eranishTivPoqr(int a)
+        {
+            int har = a / 100;
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+
+            if (har <=tas && har <= miav)
+            {
+                return har;
+            }
+            if (tas <= har && tas <= miav)
+            {
+                return tas;
+            }
+            return miav;
+        }
+
+        public static double eranishTviMiavorMecTas(int a)
+        {
+            double number;
+            int har = a / 100;
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+
+            if (miav > tas)
+            {
+                number = (double)(har + tas + miav) / a;
                 return number;
             }
-            number = (har + tas + miav)/a;
-            return number;
+            
+            return (double)a;
         }
 
     }
