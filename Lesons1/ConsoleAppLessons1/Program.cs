@@ -100,23 +100,43 @@ namespace ConsoleAppLessons
             double eranishTviHarabValNum = eranishTviHarabVal(559);
             Console.Write("eranish tvi ev ir tvanshanneri haraberutyun, ete eranish tiv>k, else hakarak:");
             Console.WriteLine(eranishTviHarabValNum);
-            
+
             //54.gtnel eranishi tveric mecn
             int eranishMecTivNum = eranishMecTiv(559);
             Console.Write("gtnel eranishi tveric mecn:");
             Console.WriteLine(eranishMecTivNum);
-            
+
             //55.gtnel eranishi tveric poqr
             int eranishTivPoqrNum = eranishTivPoqr(559);
             Console.Write("gtnel eranishi tveric poqr:");
             Console.WriteLine(eranishTivPoqrNum);
 
             //56.gtnel eranish Tvi Miavor Mec Tasnavor
-            double eranishTviMiavorMecTasNum = eranishTviMiavorMecTas(692);
+            double eranishTviMiavorMecTasNum = eranishTviMiavorMecTas(637);
             Console.Write("gtnel eranishi Tvi Miavor Mec Tasnavor:");
             Console.WriteLine(eranishTviMiavorMecTasNum);
-            
 
+            //57. eranish Tiv>300,return tas/miavor,else har/miav 
+            double eranishMecEreqharyurNum = eranishMecEreqharyur(637);
+            Console.Write("eranish Tiv>300,return tas/miavor,else har/miav :");
+            Console.WriteLine(eranishMecEreqharyurNum);
+
+            //58.ete eranish tvi tasnavori ev haryuravori gumar ec e 5, veradardznel 'a', hakarak depqum 'b'
+            simbolF(125);
+
+            //59eranish Tiv Achman Kargi
+            int[] eranishTivAchmanKargi = eranishAchmanKargi(487);
+            Console.Write("eranish Tiv Achman Kargi :");
+            Console.WriteLine(String.Join(",", eranishTivAchmanKargi));
+            //60eranish Tiv Nvazman Kargi
+            int[] eranishTivNvazmanKargi = eranishNvazmanKargi(487);
+            Console.Write("eranish Tiv Nvazman Kargi :");
+            Console.WriteLine(String.Join(",", eranishTivNvazmanKargi));
+
+            //61qaranish Tiv miav+tas = haz+har
+            bool miavorTasHavHarHazNum = miavorTasHavHarHaz(4875);
+            Console.Write("qaranish Tiv miav+tas = haz+har:");
+            Console.WriteLine(miavorTasHavHarHazNum);
 
         }
 
@@ -445,7 +465,7 @@ namespace ConsoleAppLessons
         /// <returns>true or false</returns>
         public static bool twoNumbersSumEqual(int a, int b, int c, int d)
         {
-            if(a+b == c+d || a+c== b+d || a+d== c + b)
+            if (a + b == c + d || a + c == b + d || a + d == c + b)
             {
                 return true;
             }
@@ -461,7 +481,7 @@ namespace ConsoleAppLessons
         /// <returns></returns>
         public static bool oneNumbersSumOthersEqual(int a, int b, int c, int d)
         {
-            if (a == b + c + d || b == a + c + d || c  == a + b + d || d == a+b+c)
+            if (a == b + c + d || b == a + c + d || c == a + b + d || d == a + b + c)
             {
                 return true;
             }
@@ -478,9 +498,9 @@ namespace ConsoleAppLessons
         public static int twoIsOvn(int a, int b, int c, int d)
         {
             int count = 0;
-            if (a %2 != 0)
+            if (a % 2 != 0)
             {
-                count ++;
+                count++;
             }
             if (b % 2 != 0)
             {
@@ -509,9 +529,9 @@ namespace ConsoleAppLessons
         public static bool sumTwoOne(int a)
         {
             int har = a / 100;
-            int tas = (a - (har* 100))/10;
-            int miav = (a - (har* 100) - tas*10);
-            if(miav == har + tas)
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+            if (miav == har + tas)
             {
                 return true;
             }
@@ -529,7 +549,7 @@ namespace ConsoleAppLessons
             int har = a / 100;
             int tas = (a - (har * 100)) / 10;
             int miav = (a - (har * 100) - tas * 10);
-            if (miav == tas ||  tas == har || miav==har)
+            if (miav == tas || tas == har || miav == har)
             {
                 return true;
             }
@@ -544,17 +564,19 @@ namespace ConsoleAppLessons
         public static double eranishTviHarabVal(int a)
         {
             Random r = new Random();
-            double number ;
-            int k = r.Next(100,999);
+            double number;
+            int k = r.Next(100, 999);
             int har = a / 100;
             int tas = (a - (har * 100)) / 10;
             int miav = (a - (har * 100) - tas * 10);
 
-            if (a>k)
+            if (a > k)
             {
                 number = (double)a / (har + tas + miav);
-            }else{
-                 number = (double)(har + tas + miav)/a;
+            }
+            else
+            {
+                number = (double)(har + tas + miav) / a;
             }
             return number;
         }
@@ -563,13 +585,13 @@ namespace ConsoleAppLessons
         /// </summary>
         /// <param name="a"></param>
         /// <returns></returns>
-        public  static int eranishMecTiv(int a)
+        public static int eranishMecTiv(int a)
         {
             int har = a / 100;
             int tas = (a - (har * 100)) / 10;
             int miav = (a - (har * 100) - tas * 10);
 
-            if(har > tas && har > miav)
+            if (har > tas && har > miav)
             {
                 return har;
             }
@@ -590,7 +612,7 @@ namespace ConsoleAppLessons
             int tas = (a - (har * 100)) / 10;
             int miav = (a - (har * 100) - tas * 10);
 
-            if (har <=tas && har <= miav)
+            if (har <= tas && har <= miav)
             {
                 return har;
             }
@@ -600,7 +622,11 @@ namespace ConsoleAppLessons
             }
             return miav;
         }
-
+        /// <summary>
+        ///  eranish Tvi Miavor Mec Tasnavor
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static double eranishTviMiavorMecTas(int a)
         {
             double number;
@@ -613,10 +639,120 @@ namespace ConsoleAppLessons
                 number = (double)(har + tas + miav) / a;
                 return number;
             }
-            
+
             return (double)a;
         }
+        /// <summary>
+        /// eranish Tiv>300,return tas/miavor,else har/miav 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static double eranishMecEreqharyur(int a)
+        {
+            int har = a / 100;
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+            double number;
 
+            if (a > 300)
+            {
+                number = (double)tas / miav;
+            }
+            else
+            {
+                number = (double)har /miav;
+            }
+            return number;
+        }
+        /// <summary>
+        /// ete eranish tvi tasnavori ev haryuravori gumar ec e 5, veradardznel 'a', hakarak depqum 'b'
+        /// </summary>
+        /// <param name="a"></param>
+        public static void simbolF(int a)
+        {
+            string f;
+            int har = a / 100;
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+            if(tas+har < 5)
+            {
+                f = "a";
+            }
+            else
+            {
+                f= "b";
+            }
+            Console.Write("ete eranish tvi tasnavori ev haryuravori gumar ec e 5, veradardznel 'a', hakarak depqum 'b':");
+            Console.WriteLine(f);
+        }
+        /// <summary>
+        /// eranish tvi miavorner dasavorel Achman Kargi
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static int[] eranishAchmanKargi(int a)
+        {
+            int har = a / 100;
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+            int[] array = {har,tas,miav};
+            int t;
+            for(int i = 0; i < array.Length-1; i++)
+            {
+                for(int j=1; j < array.Length; j++)
+                {
+                    if(array[i] > array[j])
+                    {
+                        t = array[i];
+                        array[i] = array[j];
+                        array[j] = t;
+                    }
+                }
+            }
+
+            return array;
+        }
+
+        /// <summary>
+        /// eranish tvi miavorner dasavorel Nvazman Kargi
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static int[] eranishNvazmanKargi(int a)
+        {
+            int har = a / 100;
+            int tas = (a - (har * 100)) / 10;
+            int miav = (a - (har * 100) - tas * 10);
+            int[] array = { har, tas, miav };
+            int t;
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = 1; j < array.Length; j++)
+                {
+                    if (array[i] < array[j])
+                    {
+                        t = array[i];
+                        array[i] = array[j];
+                        array[j] = t;
+                    }
+                }
+            }
+            return array;
+        }
+
+        public static bool miavorTasHavHarHaz(int a)
+        {
+            int haz = a / 1000;
+            int har = (a % 1000)/100;
+            int tas = (har%100) / 10;
+            int miav = tas%10;
+            if(tas+miav == har + haz)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 
 }
+
