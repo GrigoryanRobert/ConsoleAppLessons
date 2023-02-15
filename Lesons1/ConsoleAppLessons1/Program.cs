@@ -740,12 +740,12 @@ namespace ConsoleAppLessons
             return array;
         }
 
-        public static bool miavorTasHavHarHaz(int a)
+           public static bool miavorTasHavHarHaz(int a)
         {
             int haz = a / 1000;
             int har = (a % 1000)/100;
-            int tas = (har%100) / 10;
-            int miav = tas%10;
+            int tas = ((a % 1000) - har *100)/ 10;
+            int miav = (a % 1000) - har * 100 - 10*tas;
             if(tas+miav == har + haz)
             {
                 return true;
