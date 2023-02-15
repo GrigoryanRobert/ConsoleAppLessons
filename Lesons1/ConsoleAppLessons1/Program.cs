@@ -138,6 +138,35 @@ namespace ConsoleAppLessons
             Console.Write("qaranish Tiv miav+tas = haz+har:");
             Console.WriteLine(miavorTasHavHarHazNum);
 
+            //62qaranish Tiv poqr e 5000, a/ miav+har,else a/ haz+tas
+            double qaranishTviHaraberutyunNum = qaranishTviHaraberutyun(4875);
+            Console.Write("qaranish Tiv poqr e 5000, a/ miav+har,else a/ haz+tas:");
+            Console.WriteLine(qaranishTviHaraberutyunNum);
+
+            //63qaranish Tivparunakum e 1
+            int getOneInQaranishNum = getOneInQaranish(4871);
+            Console.Write("qaranish Tiv parunakum e 1:");
+            Console.WriteLine(getOneInQaranishNum); 
+            
+            //64 qaranish Tiv miav+tas<5, y="s", else y="d"
+            string qaranishMGumNum = qaranishMGum(4831);
+            Console.Write("qaranish Tiv miav+tas<5, y=\"s\", else y=\"d\":");
+            Console.WriteLine(qaranishMGumNum);
+            //65 aranish Tiv miav*tas=12, y=1, else y=0
+            string qaranishMTArtadryalNum = qaranishMTArtadryal(4834);
+            Console.Write("qaranish Tiv miav*tas=12, y=1, else y=0:");
+            Console.WriteLine(qaranishMTArtadryalNum);
+            
+            //66 qaranish Tiv arajin kam verjin nish 4
+            string qaranishFirstLastGetForNum = qaranishFirstLastGetFor(4833);
+            Console.Write("qaranish Tiv arajin kam verjin nish 4:");
+            Console.WriteLine(qaranishFirstLastGetForNum);
+
+            //67 qaranish tvi miavorner gumari qarakusin 
+            string qarIrTGumQarakusiNum = qarIrTGumQarakusi(4833);
+            Console.Write("qaranish tvi miavorner gumari qarakusin havasar e qaranish tvin:");
+            Console.WriteLine(qarIrTGumQarakusiNum);
+
         }
 
         /// <summary>
@@ -249,7 +278,7 @@ namespace ConsoleAppLessons
             arrayInt[1] = b;
             arrayInt[2] = c;
 
-            int firstInt = arrayInt[0];
+            int firstInt= arrayInt[0];
 
             for (int i = 1; i < arrayInt.Length; i++)
             {
@@ -740,7 +769,12 @@ namespace ConsoleAppLessons
             return array;
         }
 
-           public static bool miavorTasHavHarHaz(int a)
+        /// <summary>
+        /// qaranish Tiv miav+tas = haz+har
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static bool miavorTasHavHarHaz(int a)
         {
             int haz = a / 1000;
             int har = (a % 1000)/100;
@@ -751,6 +785,151 @@ namespace ConsoleAppLessons
                 return true;
             }
             return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static double qaranishTviHaraberutyun(int a)
+        {
+            double d;
+            int haz = a / 1000;
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+            if (a<5000)
+            {
+                d = (double) a/(miav+har);
+            }
+            else
+            {
+                d = (double)a / (haz+tas);
+            }
+            return d;
+        }
+        /// <summary>
+        /// qaranish Tiv parunakum e 1
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static int getOneInQaranish(int a)
+        {
+            int haz = a / 1000;
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+            int[] arrayInt = new int[4];
+            arrayInt[0] = haz;
+            arrayInt[1] = har;
+            arrayInt[2] = tas;
+            arrayInt[3] = miav;
+
+            for (int i = 0; i < arrayInt.Length; i++)
+            {
+                if ( arrayInt[i] ==1)
+                {
+                    return 1;
+                }
+            }
+
+            return 0;
+        }
+        /// <summary>
+        /// qaranish Tiv miav+tas<5, y="s", else y="d"
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static string qaranishMGum(int a)
+        {
+            int haz = a / 1000;
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+
+            string y = "";
+            if ((miav + tas)<5)
+            {
+                y = "s";
+            }
+            else
+            {
+                y = "d";
+            }
+
+            return y;
+        }
+        /// <summary>
+        /// aranish Tiv miav*tas=12, y=1, else y=0
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static string qaranishMTArtadryal(int a)
+        {
+            int haz = a / 1000;
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+
+            string y = "";
+            if ((miav * tas) == 12)
+            {
+                y = "y=12";
+            }
+            else
+            {
+                y = "y=0";
+            }
+
+            return y;
+        }
+        /// <summary>
+        /// qaranish Tiv arajin kam verjin nish 4
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static string qaranishFirstLastGetFor(int a)
+        {
+            int haz = a / 1000;
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+
+            string y = "";
+            if (haz == 4 || miav == 4)
+            {
+                y = "yes";
+            }
+            else
+            {
+                y = "no";
+            }
+
+            return y;
+        }
+        /// <summary>
+        /// qaranish tvi miavorner gumari qarakusin havasar e qaranish tvin
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static string qarIrTGumQarakusi(int a)
+        {
+            int haz = a / 1000;
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+            int t = haz + har + tas + miav;
+            string y = "";
+            if (t*t == a)
+            {
+                y = "yes";
+            }
+            else
+            {
+                y = "no";
+            }
+
+            return y;
         }
     }
 
