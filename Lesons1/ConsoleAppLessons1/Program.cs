@@ -146,8 +146,8 @@ namespace ConsoleAppLessons
             //63qaranish Tivparunakum e 1
             int getOneInQaranishNum = getOneInQaranish(4871);
             Console.Write("qaranish Tiv parunakum e 1:");
-            Console.WriteLine(getOneInQaranishNum); 
-            
+            Console.WriteLine(getOneInQaranishNum);
+
             //64 qaranish Tiv miav+tas<5, y="s", else y="d"
             string qaranishMGumNum = qaranishMGum(4831);
             Console.Write("qaranish Tiv miav+tas<5, y=\"s\", else y=\"d\":");
@@ -156,7 +156,7 @@ namespace ConsoleAppLessons
             string qaranishMTArtadryalNum = qaranishMTArtadryal(4834);
             Console.Write("qaranish Tiv miav*tas=12, y=1, else y=0:");
             Console.WriteLine(qaranishMTArtadryalNum);
-            
+
             //66 qaranish Tiv arajin kam verjin nish 4
             string qaranishFirstLastGetForNum = qaranishFirstLastGetFor(4833);
             Console.Write("qaranish Tiv arajin kam verjin nish 4:");
@@ -166,6 +166,43 @@ namespace ConsoleAppLessons
             string qarIrTGumQarakusiNum = qarIrTGumQarakusi(4833);
             Console.Write("qaranish tvi miavorner gumari qarakusin havasar e qaranish tvin:");
             Console.WriteLine(qarIrTGumQarakusiNum);
+
+            //68 qaranish tvi miav>tas, return miav*tas, else 1 
+            int qarArtNum = qarArt(4835);
+            Console.Write("qaranish tvi miav>tas, return miav*tas, else 1:");
+            Console.WriteLine(qarArtNum);
+            //69 qaranish tvi miavorneri sum>20,y=1,else y=0 
+            byte qarTivSumNum = qarTivSum(8835);
+            Console.Write("qaranish tvi miavorneri sum>20,y=1,else y=0 :");
+            Console.WriteLine(qarTivSumNum);
+            //70qaranish tvi miavorneri artadryal>200,return 0,else 1 
+            byte qarTivArtNum = qarTivArt(8835);
+            Console.Write("qaranish tvi miavorneri artadryal>200,return 0,else 1:");
+            Console.WriteLine(qarTivArtNum);
+            //151 bnnakan tveri sum,voronc vra aranc mnacordi bajanvum e trvac n bnakan tiv  
+            int bnakanTveriSumNum = bnakanTveriSum(9);
+            Console.Write("bnnakan tveri sum,voronc vra aranc mnacordi bajanvum e trvac n bnakan tiv  :");
+            Console.WriteLine(bnakanTveriSumNum);
+            //152 bnnakan tveri artadryal,voronc vra aranc mnacordi bajanvum e trvac n bnakan tiv  
+            int bnakanTveriArtNum = bnakanTveriArt(9);
+            Console.Write("bnnakan tveri artadryal,voronc vra aranc mnacordi bajanvum e trvac n bnakan tiv  :");
+            Console.WriteLine(bnakanTveriArtNum);
+            //153 bnnakan tveri sum,voronc vra  n bnakan tiv  bajanelis mnacordum kmna 2  
+            int bnakanTveriBajanumSumNum = bnakanTveriBajanumSum(9);
+            Console.Write("bnnakan tveri sum,voronc vra  n bnakan tiv  bajanelis mnacordum kmna 2:");
+            Console.WriteLine(bnakanTveriBajanumSumNum);
+            //154 bnnakan tveri sum,voronc vra n bnakan tiv bajanelis mnacordum kmna 3
+            int bnakanTveriArtEreqNum = bnakanTveriArtEreq(9);
+            Console.Write("bnnakan tveri sum,voronc vra n bnakan tiv bajanelis mnacordum kmna 3:");
+            Console.WriteLine(bnakanTveriArtEreqNum);
+            //155 bolor erknish tveri sum, voronq bazmapatik en 3
+            int erknishBazmapatikNum = erknishBazmapatik();
+            Console.Write("bolor erknish tveri sum, voronq bazmapatik en 3:");
+            Console.WriteLine(erknishBazmapatikNum);
+            //156  bolor erknish tveri artadryal, voronq bazmapatik en 3 && 5
+            ulong erknishBazmapatikArtadrNum = erknishBazmapatikArtadr();
+            Console.Write(" bolor erknish tveri artadryal, voronq bazmapatik en 3 && 5:");
+            Console.WriteLine(erknishBazmapatikArtadrNum);
 
         }
 
@@ -278,7 +315,7 @@ namespace ConsoleAppLessons
             arrayInt[1] = b;
             arrayInt[2] = c;
 
-            int firstInt= arrayInt[0];
+            int firstInt = arrayInt[0];
 
             for (int i = 1; i < arrayInt.Length; i++)
             {
@@ -689,7 +726,7 @@ namespace ConsoleAppLessons
             }
             else
             {
-                number = (double)har /miav;
+                number = (double)har / miav;
             }
             return number;
         }
@@ -703,13 +740,13 @@ namespace ConsoleAppLessons
             int har = a / 100;
             int tas = (a - (har * 100)) / 10;
             int miav = (a - (har * 100) - tas * 10);
-            if(tas+har < 5)
+            if (tas + har < 5)
             {
                 f = "a";
             }
             else
             {
-                f= "b";
+                f = "b";
             }
             Console.Write("ete eranish tvi tasnavori ev haryuravori gumar ec e 5, veradardznel 'a', hakarak depqum 'b':");
             Console.WriteLine(f);
@@ -724,13 +761,13 @@ namespace ConsoleAppLessons
             int har = a / 100;
             int tas = (a - (har * 100)) / 10;
             int miav = (a - (har * 100) - tas * 10);
-            int[] array = {har,tas,miav};
+            int[] array = { har, tas, miav };
             int t;
-            for(int i = 0; i < array.Length-1; i++)
+            for (int i = 0; i < array.Length - 1; i++)
             {
-                for(int j=1; j < array.Length; j++)
+                for (int j = 1; j < array.Length; j++)
                 {
-                    if(array[i] > array[j])
+                    if (array[i] > array[j])
                     {
                         t = array[i];
                         array[i] = array[j];
@@ -777,10 +814,10 @@ namespace ConsoleAppLessons
         public static bool miavorTasHavHarHaz(int a)
         {
             int haz = a / 1000;
-            int har = (a % 1000)/100;
-            int tas = ((a % 1000) - har *100)/ 10;
-            int miav = (a % 1000) - har * 100 - 10*tas;
-            if(tas+miav == har + haz)
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+            if (tas + miav == har + haz)
             {
                 return true;
             }
@@ -798,13 +835,13 @@ namespace ConsoleAppLessons
             int har = (a % 1000) / 100;
             int tas = ((a % 1000) - har * 100) / 10;
             int miav = (a % 1000) - har * 100 - 10 * tas;
-            if (a<5000)
+            if (a < 5000)
             {
-                d = (double) a/(miav+har);
+                d = (double)a / (miav + har);
             }
             else
             {
-                d = (double)a / (haz+tas);
+                d = (double)a / (haz + tas);
             }
             return d;
         }
@@ -827,7 +864,7 @@ namespace ConsoleAppLessons
 
             for (int i = 0; i < arrayInt.Length; i++)
             {
-                if ( arrayInt[i] ==1)
+                if (arrayInt[i] == 1)
                 {
                     return 1;
                 }
@@ -848,7 +885,7 @@ namespace ConsoleAppLessons
             int miav = (a % 1000) - har * 100 - 10 * tas;
 
             string y = "";
-            if ((miav + tas)<5)
+            if ((miav + tas) < 5)
             {
                 y = "s";
             }
@@ -920,7 +957,7 @@ namespace ConsoleAppLessons
             int miav = (a % 1000) - har * 100 - 10 * tas;
             int t = haz + har + tas + miav;
             string y = "";
-            if (t*t == a)
+            if (t * t == a)
             {
                 y = "yes";
             }
@@ -931,7 +968,186 @@ namespace ConsoleAppLessons
 
             return y;
         }
+        /// <summary>
+        /// qaranish tvi miav>tas, return miav*tas, else 1
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static int qarArt(int a)
+        {
+            int haz = a / 1000;
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+            int t = haz + har + tas + miav;
+            int y ;
+            if (miav > tas)
+            {
+                y = miav*har;
+            }
+            else
+            {
+                y = 1;
+            }
+
+            return y;
+        }
+        /// <summary>
+        /// qaranish tvi miavorneri sum>20,y=1,else y=0
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static byte qarTivSum(int a)
+        {
+            int haz = a / 1000;
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+            int t = haz + har + tas + miav;
+            byte y;
+            if (t > 20)
+            {
+                y = 1;
+            }
+            else
+            {
+                y = 0;
+            }
+
+            return y;
+        }
+        /// <summary>
+        /// qaranish tvi miavorneri artadryal>200,return 0,else 1
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static byte qarTivArt(int a)
+        {
+            int haz = a / 1000;
+            int har = (a % 1000) / 100;
+            int tas = ((a % 1000) - har * 100) / 10;
+            int miav = (a % 1000) - har * 100 - 10 * tas;
+            int t = haz * har * tas * miav;
+            byte y;
+            if (t > 200)
+            {
+                y = 0;
+            }
+            else
+            {
+                y = 1;
+            }
+
+            return y;
+        }
+
+        /// <summary>
+        /// bnnakan tveri sum,voronc vra aranc mnacordi bajanvum e trvac n bnakan tiv  
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static int bnakanTveriSum(int n)
+        {
+            int sum = 0;
+            for(int i = 1; i <= n; i++)
+            {
+                if(n%i == 0)
+                {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        /// <summary>
+        /// bnnakan tveri sum,voronc vra aranc mnacordi bajanvum e trvac n bnakan tiv  
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static int bnakanTveriArt(int n)
+        {
+            int sum = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                {
+                    sum *= i;
+                }
+            }
+            return sum;
+        }
+
+
+        /// <summary>
+        /// bnnakan tveri sum,voronc vra  n bnakan tiv  bajanelis mnacordum kmna 2
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static int bnakanTveriBajanumSum(int n)
+        {
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 2)
+                {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        /// <summary>
+        /// bnnakan tveri sum,voronc vra n bnakan tiv bajanelis mnacordum kmna 3
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static int bnakanTveriArtEreq(int n)
+        {
+            int sum = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 3)
+                {
+                    sum *= i;
+                }
+            }
+            return sum;
+        }
+        /// <summary>
+        /// bolor erknish tveri sum, voronq bazmapatik en 3
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static int erknishBazmapatik()
+        {
+            int sum = 0;
+            for(int i = 10; i < 100; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        /// <summary>
+        /// bolor erknish tveri artadryal, voronq bazmapatik en 3 && 5
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static ulong erknishBazmapatikArtadr()
+        {
+            ulong sum = 1;
+            for (uint i = 10; i < 100; i++)
+            {
+                if (i % 3 == 0 && i%5 == 0)
+                {
+                    sum *= i;
+                }
+            }
+            return sum;
+        }
     }
 
 }
-
