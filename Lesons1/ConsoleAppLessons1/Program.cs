@@ -203,6 +203,64 @@ namespace ConsoleAppLessons
             ulong erknishBazmapatikArtadrNum = erknishBazmapatikArtadr();
             Console.Write(" bolor erknish tveri artadryal, voronq bazmapatik en 3 && 5:");
             Console.WriteLine(erknishBazmapatikArtadrNum);
+            //157 bolor eranish tveri sum, voronq bazmapatik chen 5
+            int eranishBazmapatikChenHingNum = eranishBazmapatikChenHing();
+            Console.Write(" bolor eranish tveri sum, voronq bazmapatik chen 5:");
+            Console.WriteLine(eranishBazmapatikChenHingNum);
+            //158 bolor eranish tveri art, voronq bazmapatik chen 2 && 3
+            ulong eranishBazmapatikChenErkuEreqArtNum = eranishBazmapatikChenErkuEreqArt();
+            Console.Write(" bolor eranish tveri art, voronq bazmapatik chen 2 && 3:");
+            Console.WriteLine(eranishBazmapatikChenErkuEreqArtNum);
+            //159 bolor eranish tveri art, voronq bajanac 3 kmna 1 mnacord, is bajanac 4-i 2
+            ulong eranishBazmapatikChenMekChorsArtNum = eranishBazmapatikChenMekChorsArt();
+            Console.Write("bolor eranish tveri art, voronq bajanac 3 kmna 1 mnacord, is bajanac 4-i 2:");
+            Console.WriteLine(eranishBazmapatikChenMekChorsArtNum);
+            //160 eranish amenapoqr tiv vor bazmapatkac 16 kstacvi bnakan tvi qarakusi
+            int smollEranishBnTivQarNum = smollEranishBnTivQar();
+            Console.Write("eranish amenapoqr tiv vor bazmapatkac 16 kstacvi bnakan tvi qarakusi:");
+            Console.WriteLine(smollEranishBnTivQarNum);
+            
+            //161 qaranish amenapoqr tiv vor bazmapatkac 26 kstacvi bnakan tvi qarakusi
+            int smolQaranisBnTivQarNum = smolQaranisBnTivQar();
+            Console.Write("qaranish amenapoqr tiv vor bazmapatkac 26 kstacvi bnakan tvi qarakusi:");
+            Console.WriteLine(smolQaranisBnTivQarNum);
+             
+            //162 qaranish amenamec tiv vor bazmapatkac 14 kstacvi bnakan tvi qarakusi
+            int bigQaranisBnTivQarNum = bigQaranisBnTivQar(14);
+            Console.Write("qaranish amenamec tiv vor bazmapatkac 14 kstacvi bnakan tvi qarakusi:");
+            Console.WriteLine(bigQaranisBnTivQarNum);
+
+            //163 qaranish amenamec tiv vor bazmapatkac 18 kstacvi bnakan tvi qarakusi
+            int bigQaranisBnTivQarNum2 = bigQaranisBnTivQar(18);
+            Console.Write("qaranish amenamec tiv vor bazmapatkac 18 kstacvi bnakan tvi qarakusi:");
+            Console.WriteLine(bigQaranisBnTivQarNum2);
+            
+            //164 amenapoqr eranish tiv vori qarakusi armat> n bnakan tvic
+            int eranishSmalQarArmatNum = eranishSmalQarArmat(20);
+            Console.Write("amenapoqr eranish tiv vori qarakusi armat> n bnakan tvic:");
+            Console.WriteLine(eranishSmalQarArmatNum);
+            
+            //165 trvac tiv handisanum e 3 astichan, te voch
+            bool bnakanTivEreqiAstichanNum = bnakanTivEreqiAstichan(27);
+            Console.Write("trvac tiv handisanum e 3 astichan, te voch:");
+            Console.WriteLine(bnakanTivEreqiAstichanNum);
+            //166 trvac tiv handisanum e 4 astichan, te voch
+            byte bnakanTivChorsiAstichanNum = bnakanTivChorsiAstichan(64);
+            Console.Write("trvac tiv handisanum e 4 astichan, te voch:");
+            Console.WriteLine(bnakanTivChorsiAstichanNum);
+
+            //------zangvac----------
+
+            //drakan tarreri mijin tvabanakan
+            int[] arrayInt = { -10, 5, 7,10, 0, 9,18 };
+            double drakanTarMijinTvabanakanNum = drakanTarMijinTvabanakan(arrayInt);
+            Console.Write("drakan tarreri mijin tvabanakan:");
+            Console.WriteLine(drakanTarMijinTvabanakanNum); 
+            //drakan tarreri mijin qarakusayin
+            double drakanTarMijinQarakusayinNum = drakanTarMijinQarakusayin(arrayInt);
+            Console.Write("drakan tarreri mijin qarakusayin:");
+            Console.WriteLine(drakanTarMijinQarakusayinNum); 
+
 
         }
 
@@ -1147,6 +1205,215 @@ namespace ConsoleAppLessons
                 }
             }
             return sum;
+        }
+
+        /// <summary>
+        /// bolor eranish tveri sum, voronq bazmapatik chen 5
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static int eranishBazmapatikChenHing()
+        {
+            int sum = 0;
+            for (int i = 100; i < 1000; i++)
+            {
+                if (i % 5 != 0)
+                {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        /// <summary>
+        /// bolor eranish tveri art, voronq bazmapatik chen 2 && 3
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static ulong eranishBazmapatikChenErkuEreqArt()
+        {
+            ulong sum = 1;
+            for (uint i = 100; i < 1000; i++)
+            {
+                if (i % 2 != 0 && i % 3 != 0)
+                {
+                    sum *= i;
+                }
+            }
+            return sum;
+        }
+
+        /// <summary>
+        /// bolor eranish tveri art, voronq /3 kmna 1 mnacord, is /4 2
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static ulong eranishBazmapatikChenMekChorsArt()
+        {
+            ulong sum = 1;
+            for (uint i = 100; i < 1000; i++)
+            {
+                if (i % 3 == 1 && i % 4 == 2)
+                {
+                    sum *= i;
+                }
+            }
+            return sum;
+        }
+        /// <summary>
+        /// eranish amenapoqr tiv vor bazmapatkac 16 kstacvi bnakan tvi qarakusi
+        /// </summary>
+        /// <returns></returns>
+        public static int smollEranishBnTivQar()
+        {
+            int x=0;
+            for(int i = 100; i < 1000; i++)
+            {
+                double t = (double)Math.Sqrt(i * 16);
+                if (t%1 == 0)
+                {
+                    x = i;break;
+                }
+            }
+            return x;
+        }
+        /// <summary>
+        /// qaranish amenapoqr tiv vor bazmapatkac 26 kstacvi bnakan tvi qarakusi
+        /// </summary>
+        /// <returns></returns>
+        public static int smolQaranisBnTivQar()
+        {
+            int x = 0;
+            for (int i = 1000; i < 10000; i++)
+            {
+                double t = (double)Math.Sqrt(i * 26);
+                if (t % 1 == 0)
+                {
+                    x = i; break;
+                }
+            }
+            return x;
+        }
+        /// <summary>
+        /// qaranish amenamec tiv vor bazmapatkac 14 kstacvi bnakan tvi qarakusi
+        /// </summary>
+        /// <returns></returns>
+
+        public static int bigQaranisBnTivQar(int n)
+        {
+            int x = 0;
+            for (int i = 9999; i >= 1000; i--)
+            {
+                double t = (double)Math.Sqrt(i * n);
+                if (t % 1 == 0)
+                {
+                    x = i; break;
+                }
+            }
+            return x;
+        }
+        /// <summary>
+        /// amenapoqr eranish tiv vori qarakusi armat> n bnakan tvic
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static int eranishSmalQarArmat(int n)
+        {
+            int x = 0;
+
+            for (int i=100; i < 1000; i++)
+            {
+                double t = (double)Math.Sqrt(i);
+                if (t % 1 == 0)
+                {
+                    if (t > n)
+                    {
+                        x = i; break;
+                    }
+                  
+                }
+            }
+            return (int)x;
+        }
+        /// <summary>
+        /// trvac tiv handisanum e 3 astichan, te voch
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static bool bnakanTivEreqiAstichan(int a)
+        {
+            int t = 3;
+            bool b= false;
+            for(int i = 1; i < a / 2; i++)
+            {
+                t *= 3;
+                if(t == a)
+                {
+                    b = true;break;
+                }
+            }
+            return b;
+        }
+
+        /// <summary>
+        /// trvac tiv handisanum e 4 astichan, te voch
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
+        public static byte bnakanTivChorsiAstichan(int a)
+        {
+            int t = 4;
+            byte y = 0;
+            for (int i = 1; i < a / 2; i++)
+            {
+                t *= 4;
+                if (t == a)
+                {
+                    y = 1; break;
+                }
+            }
+            return y;
+        }
+
+        //---------zangvac------------
+        /// <summary>
+        /// drakan tarreri mijin tvabanakan
+        /// </summary>
+        /// <param name="arrayInt"></param>
+        /// <returns></returns>
+        public static double drakanTarMijinTvabanakan(int[] arrayInt)
+        {
+            double sum = 0;
+            double count = 0;
+            for(int i= 0; i < arrayInt.Length; i++)
+            {
+                if(arrayInt[i] > 0)
+                {
+                    sum += (double)arrayInt[i];
+                    count++;
+                }
+            }
+            return (double)sum/count;
+        }
+
+        /// <summary>
+        /// drakan tarreri mijin qarakusayin
+        /// </summary>
+        /// <param name="arrayInt"></param>
+        /// <returns></returns>
+        public static double drakanTarMijinQarakusayin(int[] arrayInt)
+        {
+            double sum = 0;
+            double count = 0;
+            for (int i = 0; i < arrayInt.Length; i++)
+            {
+                if (arrayInt[i] > 0)
+                {
+                    sum += (double)(arrayInt[i]* arrayInt[i]);
+                    count++;
+                }
+            }
+            return (double)Math.Sqrt(sum / count);
         }
     }
 
