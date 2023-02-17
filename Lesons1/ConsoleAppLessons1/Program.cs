@@ -251,15 +251,37 @@ namespace ConsoleAppLessons
 
             //------zangvac----------
 
-            //drakan tarreri mijin tvabanakan
-            int[] arrayInt = { -10, 5, 7,10, 0, 9,18 };
+            //211.drakan tarreri mijin tvabanakan
+            int[] arrayInt = { 10, 5, 7,10, 2, 9,18 };
             double drakanTarMijinTvabanakanNum = drakanTarMijinTvabanakan(arrayInt);
             Console.Write("drakan tarreri mijin tvabanakan:");
             Console.WriteLine(drakanTarMijinTvabanakanNum); 
-            //drakan tarreri mijin qarakusayin
+            //212.drakan tarreri mijin qarakusayin
             double drakanTarMijinQarakusayinNum = drakanTarMijinQarakusayin(arrayInt);
             Console.Write("drakan tarreri mijin qarakusayin:");
-            Console.WriteLine(drakanTarMijinQarakusayinNum); 
+            Console.WriteLine(drakanTarMijinQarakusayinNum);
+
+            //213.bacasakan tarreri mijin qarakusayin
+            double bacasakanTarMijinQarakusayinNum = bacasakanTarMijinQarakusayin(arrayInt);
+            Console.Write("bacasakan tarreri mijin qarakusayin:");
+            Console.WriteLine(bacasakanTarMijinQarakusayinNum);
+            //214.bacasakan tarreri mijin tvabanakan
+            double bacasakanTarMijinTvabanakanNum = bacasakanTarMijinTvabanakan(arrayInt);
+            Console.Write("bacasakan tarreri mijin tvabanakan:");
+            Console.WriteLine(bacasakanTarMijinTvabanakanNum);
+            //215.zuyg index unecox tarreri gumar
+            int zuygIndexTarSumNum = zuygIndexTarSum(arrayInt);
+            Console.Write("zuyg index unecox tarreri gumar:");
+            Console.WriteLine(zuygIndexTarSumNum);
+            //216.zuyg index unecox tarreri artadryal
+            int zuygIndexTarArtNum = zuygIndexTarArt(arrayInt);
+            Console.Write("zuyg index unecox tarreri artadryal:");
+            Console.WriteLine(zuygIndexTarArtNum);
+            //217.kent index unecox tarreri qarakusineri artadryal
+            int kentIndexTarQarArtNum = kentIndexTarQarArt(arrayInt);
+            Console.Write("kent index unecox tarreri qarakusineri artadryal:");
+            Console.WriteLine(kentIndexTarQarArtNum);
+            
 
 
         }
@@ -1415,6 +1437,97 @@ namespace ConsoleAppLessons
             }
             return (double)Math.Sqrt(sum / count);
         }
+
+        /// <summary>
+        /// bacasakan tarreri mijin qarakusayin
+        /// </summary>
+        /// <param name="arrayInt"></param>
+        /// <returns></returns>
+        public static double bacasakanTarMijinQarakusayin(int[] arrayInt)
+        {
+            double sum = 0;
+            double count = 0;
+            for (int i = 0; i < arrayInt.Length; i++)
+            {
+                if (arrayInt[i] < 0)
+                {
+                    sum += (double)(arrayInt[i] * arrayInt[i]);
+                    count++;
+                }
+            }
+            return -(double)Math.Sqrt(sum / count);
+        }
+
+        /// <summary>
+        /// bacasakan tarreri mijin tvabanakan
+        /// </summary>
+        /// <param name="arrayInt"></param>
+        /// <returns></returns>
+        public static double bacasakanTarMijinTvabanakan(int[] arrayInt)
+        {
+            double sum = 0;
+            double count = 0;
+            for (int i = 0; i < arrayInt.Length; i++)
+            {
+                if (arrayInt[i] < 0)
+                {
+                    sum += (double)arrayInt[i];
+                    count++;
+                }
+            }
+            return (double)sum / count;
+        }
+        /// <summary>
+        /// zuyg index unecox tarreri gumar
+        /// </summary>
+        /// <param name="arrayInt"></param>
+        /// <returns></returns>
+        public static int zuygIndexTarSum(int[] arrayInt)
+        {
+            int sum = 0;
+            for (int i = 0; i < arrayInt.Length; i++)
+            {
+                if (i%2 == 0 && i != 0)
+                {
+                    sum += arrayInt[i];
+                }
+            }
+            return sum;
+        }
+
+
+        /// <summary>
+        /// zuyg index unecox tarreri artadryal
+        /// </summary>
+        /// <param name="arrayInt"></param>
+        /// <returns></returns>
+        public static int zuygIndexTarArt(int[] arrayInt)
+        {
+            int sum = 1;
+            for (int i = 0; i < arrayInt.Length; i++)
+            {
+                if (i % 2 == 0 && i != 0)
+                {
+                    sum *= arrayInt[i];
+                }
+            }
+            return sum;
+        }
+
+        public static int kentIndexTarQarArt(int[] arrayInt)
+        {
+            int sum = arrayInt[1]* arrayInt[1];
+            for (int i = 3; i < arrayInt.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    sum *= arrayInt[i]* arrayInt[i];
+                }
+            }
+            return sum;
+        }
+
+
     }
 
 }
