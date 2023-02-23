@@ -321,10 +321,58 @@ namespace ConsoleAppLessons
             Console.Write("kent index unecox tarreri qarakusineri artadryal:");
             Console.WriteLine(kentIndexTarQarArtNum);
             
+            //Ashxatavardzi hashvark
+            Console.WriteLine(AshxatavardziHashvark(105000));
 
 
         }
 
+        
+        
+          static double AshxatavardziHashvark(double n)
+        {
+            double ashxatavardz = n - EkamtayinHark(n) - Socvchar(n) - DroshmanishayinHark(n);
+            return ashxatavardz;
+        }
+
+
+        static double EkamtayinHark(double ek)
+        {
+            return 0.2*ek;
+        }
+
+        static double Socvchar(double ek)
+        {
+            return 0.05 * ek;
+        }
+
+        static double DroshmanishayinHark(double ek)
+        {
+            double droshm;
+            if (ek > 1 && ek < 100001)
+            {
+                droshm = 1500;
+            }
+            else if (ek > 100000 && ek < 200001)
+            {
+                droshm = 3000;
+            }
+            else if (ek > 200000 && ek < 500001)
+            {
+                droshm = 5500;
+            }
+            else if (ek > 500000 && ek < 1000001)
+            {
+                droshm = 8500;
+            }
+            else
+            {
+                droshm = 15000;
+            }
+
+            return droshm;
+        }
+        
         /// <summary>
         /// //21.kartacen a,b,c tveric meci arjeq@
         /// </summary>
